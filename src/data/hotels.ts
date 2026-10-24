@@ -1,0 +1,25 @@
+import type { ImageSourcePropType } from 'react-native';
+import type { Hotel } from '../types';
+export const photos: Record<string, ImageSourcePropType> = {
+  pool: require('../../assets/photos/pool.jpg'), suite: require('../../assets/photos/suite.jpg'),
+  bedroom: require('../../assets/photos/bedroom.jpg'), resort: require('../../assets/photos/resort.jpg'),
+  city: require('../../assets/photos/city.jpg'), villa: require('../../assets/photos/villa.jpg'),
+  ocean: require('../../assets/photos/ocean.jpg'), mountain: require('../../assets/photos/mountain.jpg'),
+  lounge: require('../../assets/photos/lounge.jpg'),
+};
+export const hotels: Hotel[] = [
+  {id:'emeraldia',name:'Emeraldia Hotel',city:'Bali',country:'Indonesia',address:'18 Ocean Lane, Seminyak, Bali',price:29,rating:4.8,reviews:1268,category:'Recommended',photo:'suite',gallery:['suite','pool','villa','lounge'],description:'Slow mornings, palm-lined pools, and a little room to breathe. Discover a peaceful hideaway with thoughtfully designed rooms, fresh island breakfasts, and the ocean just a short walk away.',amenities:['Wi-Fi','Pool','Restaurant','Parking','Spa'],latitude:-8.6905,longitude:115.1565},
+  {id:'palazzo',name:'Palazzo Versace',city:'Rome',country:'Italy',address:'24 Via della Luce, Rome',price:36,rating:4.9,reviews:986,category:'Popular',photo:'suite',gallery:['suite','lounge','bedroom'],description:'A beautifully considered city stay, where warm interiors meet timeless Italian charm. Unwind in a generous suite after a day discovering quiet piazzas, local cafés, and the heart of Rome.',amenities:['Wi-Fi','Restaurant','Gym','Parking'],latitude:41.9028,longitude:12.4964},
+  {id:'president',name:'President Hotel',city:'Paris',country:'France',address:'12 Rue des Jardins, Paris',price:35,rating:4.7,reviews:842,category:'Trending',photo:'bedroom',gallery:['bedroom','suite','city'],description:'Your own Parisian retreat, filled with natural light and thoughtful details. Enjoy spacious rooms, a relaxed café, and easy access to the city’s most memorable neighborhoods.',amenities:['Wi-Fi','Restaurant','Gym'],latitude:48.8566,longitude:2.3522},
+  {id:'palms',name:'The Palms Resort',city:'Phuket',country:'Thailand',address:'8 Palm Bay, Phuket',price:42,rating:4.9,reviews:1562,category:'Recommended',photo:'resort',gallery:['resort','pool','ocean'],description:'Trade busy days for ocean breezes. An easygoing tropical escape with a beautiful pool, open-air dining, and plenty of space to settle into island time.',amenities:['Wi-Fi','Pool','Spa','Restaurant','Parking'],latitude:7.8804,longitude:98.3923},
+  {id:'grand',name:'Grand Royal',city:'London',country:'United Kingdom',address:'32 Garden Square, London',price:58,rating:4.6,reviews:723,category:'Popular',photo:'city',gallery:['city','lounge','suite'],description:'An elegant base for your next city adventure. Thoughtful service, cozy rooms, and a welcoming lounge make this boutique stay feel like your own London address.',amenities:['Wi-Fi','Gym','Restaurant','Parking'],latitude:51.5074,longitude:-0.1278},
+  {id:'azure',name:'Azure Bay Retreat',city:'Malé',country:'Maldives',address:'6 Azure Island, North Malé Atoll',price:89,rating:5.0,reviews:411,category:'Trending',photo:'villa',gallery:['villa','ocean','pool'],description:'A sunlit escape surrounded by turquoise water. Wake to sea air, spend afternoons by the pool, and finish the day with a sunset dinner under the palms.',amenities:['Wi-Fi','Pool','Spa','Restaurant'],latitude:4.1755,longitude:73.5093},
+  {id:'alpine',name:'Alpine Haven',city:'Interlaken',country:'Switzerland',address:'9 Mountain Way, Interlaken',price:64,rating:4.8,reviews:604,category:'Recommended',photo:'mountain',gallery:['mountain','bedroom','suite'],description:'Fresh mountain air and a softer pace of life. A cozy alpine escape with panoramic surroundings, inviting rooms, and generous breakfasts before a day outdoors.',amenities:['Wi-Fi','Parking','Spa','Restaurant'],latitude:46.6863,longitude:7.8632},
+  {id:'maison',name:'Maison Bouquet',city:'Paris',country:'France',address:'28 Avenue des Fleurs, Paris',price:32,rating:4.5,reviews:537,category:'Popular',photo:'lounge',gallery:['lounge','bedroom','city'],description:'A small, welcoming hotel with a creative spirit. Find a comfortable corner in the lounge, explore the local markets, and enjoy the simple pleasures of a Paris stay.',amenities:['Wi-Fi','Restaurant'],latitude:48.8647,longitude:2.3490},
+];
+export const findHotel = (id: string) => hotels.find(h => h.id === id);
+export const reviewSamples = [
+ {name:'Sophia M.',avatar:'SM',rating:5,text:'Such a peaceful stay. The room was lovely, the team was thoughtful, and breakfast was a highlight.',date:'Sample review'},
+ {name:'Daniel K.',avatar:'DK',rating:5,text:'Beautiful spaces and an easy check-in. We loved having a quiet place to come back to after exploring.',date:'Sample review'},
+ {name:'Ava R.',avatar:'AR',rating:4,text:'Comfortable beds and a great atmosphere. A lovely choice for a relaxed weekend away.',date:'Sample review'},
+];
