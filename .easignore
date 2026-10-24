@@ -1,0 +1,9 @@
+node_modules/
+.expo/
+dist*/
+qa/
+*.log
+# Cloud builds regenerate Android from app.json. The ZIP includes a local copy.
+android/
+ios/
+.git/
